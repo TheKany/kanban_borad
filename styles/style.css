@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/*
+scss HTML에 적용 방법
+1. 스타일폴더 속에 scss파일명.scss / css파일명.css 를 만든다.
+2. scss 파일에 작성
+3. npx sass --watch 폴더명/scss파일명.scss 폴더명/css파일명.css
+*/
+.kanban {
+  display: flex;
+  padding: 30px;
+  width: 750px;
+  background: hotpink;
+  border-radius: 5px;
+}
+.kanban .column {
+  flex: 1;
+}
+.kanban .column:not(:last-child) {
+  margin-right: 30px;
+}
+.kanban .column-title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: white;
+  user-select: none; /* 클릭 불가 */
+}
+.kanban .items {
+  padding: 10px 15px;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.kanban .item-dropzone {
+  height: 10px;
+  transition: background 0.15s, height 0.15s;
+}
+.kanban .item-dropzone--active {
+  height: 20px;
+  background: rgba(0, 0, 0, 0.25);
+}
+.kanban .add-item {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.kanban * {
+  font-family: sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */
