@@ -5,7 +5,6 @@ export default class Kanban {
     this.root = root;
 
     Kanban.columns().forEach((column) => {
-      // 컬럼 클래스 인스턴스 만들기
       const columnView = new Column(column.id, column.title);
 
       this.root.appendChild(columnView.elements.root);
@@ -16,7 +15,7 @@ export default class Kanban {
     return [
       {
         id: 1,
-        title: '시작 전',
+        title: '해야 할 일',
       },
       {
         id: 2,

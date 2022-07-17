@@ -1,6 +1,6 @@
-export default class dataApi {
-  static getItem(columnId) {
-    const column = read().find((column) => column.id === columnId);
+export default class DataApi {
+  static getItems(columnId) {
+    const column = read().find((column) => column.id == columnId);
 
     if (!column) {
       return [];
@@ -9,16 +9,17 @@ export default class dataApi {
     return column.items;
   }
 
+  // item 생성
   static insertItem(columnId, content) {
     const data = read();
-    const column = data.find((column) => column.id === columnId);
+    const column = data.find((column) => column.id == columnId);
     const item = {
       id: Date.now(),
       content,
     };
 
     if (!column) {
-      throw new Error('에러');
+      throw new Error('Column does not exist.');
     }
 
     column.items.push(item);
@@ -27,6 +28,7 @@ export default class dataApi {
     return item;
   }
 
+  // update 아이템
   static updateItem(itemId, newProps) {
     const data = read();
     const [item, currentColumn] = (() => {
@@ -40,27 +42,27 @@ export default class dataApi {
     })();
 
     if (!item) {
-      throw new Error('Item이 없습니다.');
+      throw new Error('Item not found.');
     }
 
     item.content =
       newProps.content === undefined ? item.content : newProps.content;
 
-    // update column and position
+    // 리스트 내역 위치
     if (newProps.columnId !== undefined && newProps.position !== undefined) {
       const targetColumn = data.find(
         (column) => column.id == newProps.columnId,
       );
 
       if (!targetColumn) {
-        throw new Error('targetColumn을 찾을 수 없습니다.');
+        throw new Error('Target column not found.');
       }
 
-      // Delete item
-      currentColumn.items.splice(currentColumn.items.indaxOf(item), 1);
+      // 삭제
+      currentColumn.items.splice(currentColumn.items.indexOf(item), 1);
 
-      // Move item
-      targetColumn.item.splice(newProps.position, 0, item);
+      // 이동
+      targetColumn.items.splice(newProps.position, 0, item);
     }
 
     save(data);
@@ -72,18 +74,19 @@ export default class dataApi {
     for (const column of data) {
       const item = column.items.find((item) => item.id == itemId);
 
-      if (!item) {
-        column.items.splice(column.items.indaxOf(item), 1);
+      if (item) {
+        column.items.splice(column.items.indexOf(item), 1);
       }
     }
+
     save(data);
   }
 }
 
 function read() {
-  const localdata = localStorage.getItem('kanban-data');
+  const json = localStorage.getItem('kanban-data');
 
-  if (!localdata) {
+  if (!json) {
     return [
       {
         id: 1,
@@ -99,7 +102,8 @@ function read() {
       },
     ];
   }
-  return JSON.parse(localdata);
+
+  return JSON.parse(json);
 }
 
 function save(data) {

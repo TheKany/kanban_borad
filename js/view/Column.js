@@ -1,25 +1,33 @@
-import dataApi from '../API/dataApi.js';
+import DataApi from '../api/DataApi.js';
+import DropZone from './DropZone.js';
 import Item from './Item.js';
 
 export default class Column {
   constructor(id, title) {
+    const topDropZone = DropZone.createDropZone();
+
     this.elements = {};
     this.elements.root = Column.createRoot();
-    this.elements.title = this.elements.root.querySelector('.column-title');
-    this.elements.items = this.elements.root.querySelector('.column-items');
-    this.elements.addItem = this.elements.root.querySelector('.add-item');
+    this.elements.title = this.elements.root.querySelector(
+      '.kanban-column-title',
+    );
+    this.elements.items = this.elements.root.querySelector(
+      '.kanban-column-items',
+    );
+    this.elements.addItem =
+      this.elements.root.querySelector('.kanban-add-item');
 
     this.elements.root.dataset.id = id;
     this.elements.title.textContent = title;
+    this.elements.items.appendChild(topDropZone);
 
     this.elements.addItem.addEventListener('click', () => {
-      // add item
-      const newItem = dataApi.insertItem(id, '');
+      const newItem = DataApi.insertItem(id, '');
 
       this.renderItem(newItem);
     });
 
-    dataApi.getItem(id).forEach((item) => {
+    DataApi.getItems(id).forEach((item) => {
       this.renderItem(item);
     });
   }
@@ -30,18 +38,15 @@ export default class Column {
     range.selectNode(document.body);
 
     return range.createContextualFragment(`
-    <div class="column">
-      <div class="column-title"></div>
-      <div class="column-items"></div>
-      <button class="add-item" type="button">
-        <i class="fa-solid fa-plus"></i>
-      </button>
-    </div>
-    `).children[0];
+			<div class="kanban-column">
+				<div class="kanban-column-title"></div>
+				<div class="kanban-column-items"></div>
+				<button class="kanban-add-item" type="button"><i class="fa-solid fa-plus"></i></button>
+			</div>
+		`).children[0];
   }
 
   renderItem(data) {
-    // create item
     const item = new Item(data.id, data.content);
 
     this.elements.items.appendChild(item.elements.root);
