@@ -15,5 +15,5 @@
 :one:  해야 할 일, 진행중, 완료 카테고리 분리<br>
 :two:  :heavy_plus_sign: 를 누르면 적는 공간 추가<br>
 :three:  목록 드래그 앤 드롭<br>
-:four:  더블클릭 시 삭제
+:four:  더블클릭 시 삭제<br>
 :five:  로컬스토리지 저장
