@@ -1,9 +1,31 @@
+body {
+  background: #505050;
+}
+
+.date {
+  text-align: center;
+  font-size: 4rem;
+  color: white;
+}
+
+.clock {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.main-board {
+  display: flex;
+  justify-content: center;
+}
+
 .kanban {
   display: flex;
   padding: 30px;
   width: 750px;
-  background: #009578;
+  background: #09a183;
   border-radius: 5px;
+  text-align: center;
 }
 
 .kanban * {
