@@ -46,7 +46,7 @@ function getMonthString(month) {
       return 'Jun';
       break;
     case 7:
-      return 'Jal';
+      return 'Jul';
       break;
     case 8:
       return 'Aug';
