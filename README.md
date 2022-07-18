@@ -10,7 +10,8 @@
 자바스크립트에 대해 좀 더 공부하고 싶어서 시작하게 되었다.
 
 ## 기능
-![Kanban_Board_-_Chrome_2022-07-17_18-54-37_AdobeExpress (1)](https://user-images.githubusercontent.com/105787985/179393957-3fd38e99-bfa9-47e8-8e96-42659bc02774.gif)
+
+![Kanban_Board_-_Chrome_2022-07-18_13-23-44_AdobeExpress](https://user-images.githubusercontent.com/105787985/179445572-ea0a46fa-2556-4a7c-95a3-4c2b7b2412dc.gif)
 
 :one:  해야 할 일, 진행중, 완료 카테고리 분리<br>
 :two:  :heavy_plus_sign: 를 누르면 적는 공간 추가<br>
