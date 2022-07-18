@@ -7,11 +7,13 @@
 
 
 ## 목적
-자바스크립트에 대해 좀 더 공부하고 싶어서 시작하게 되었다.
+Front-end 개발자의 가장 기본적인 HTML, CSS, Javascript에 대한 이해를 높이기 위해 기획했습니다.<br>
+기존의 TODO리스트가 아닌 Trello의 ‘Kanban Board’를 클론 코딩하였습니다.
 
 ## 기능
 
-![Kanban_Board_-_Chrome_2022-07-18_13-23-44_AdobeExpress](https://user-images.githubusercontent.com/105787985/179445572-ea0a46fa-2556-4a7c-95a3-4c2b7b2412dc.gif)
+![Kanban_Board_-_Chrome_2022-07-18_13-43-41_AdobeExpress](https://user-images.githubusercontent.com/105787985/179446694-cbfe820b-3b2e-4d1d-9e81-24e1e07ad1d4.gif)
+
 
 :one:  해야 할 일, 진행중, 완료 카테고리 분리<br>
 :two:  :heavy_plus_sign: 를 누르면 적는 공간 추가<br>
