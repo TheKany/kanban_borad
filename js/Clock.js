@@ -13,18 +13,16 @@ function getTime() {
 
 function getDate() {
   const date = new Date();
-  const month = date.getMonth();
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
   const day = date.getDay();
-  const dayOfWeek = date.getDate();
 
   const StrMonth = getMonthString(month);
 
+  console.log(date);
+
   MainDate.innerHTML =
-    StrMonth +
-    '.' +
-    ('00' + day.toString()).slice(-2) +
-    '.' +
-    ('00' + dayOfWeek.toString()).slice(-2);
+    year + '.' + StrMonth + '.' + ('00' + day.toString()).slice(-2);
 }
 
 function getMonthString(month) {
