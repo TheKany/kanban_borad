@@ -7,7 +7,8 @@
 
 
 ## 목적
-자바스크립트에 대해 좀 더 공부하고 싶어서 시작하게 되었다.
+Front-end 개발자의 가장 기본적인 HTML, CSS, Javascript에 대한 이해를 높이기 위해 기획했습니다.<br>
+기존의 TODO리스트가 아닌 Trello의 ‘Kanban Board’를 클론 코딩하였습니다.
 
 ## 기능
 
