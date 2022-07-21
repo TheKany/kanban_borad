@@ -12,8 +12,7 @@ Front-end 개발자의 가장 기본적인 HTML, CSS, Javascript에 대한 이�
 
 ## 기능
 
-![Kanban_Board_-_Chrome_2022-07-18_13-43-41_AdobeExpress](https://user-images.githubusercontent.com/105787985/179446694-cbfe820b-3b2e-4d1d-9e81-24e1e07ad1d4.gif)
-
+![Kanban_Board_-_Chrome_2022-07-18_13-55-10_AdobeExpress](https://user-images.githubusercontent.com/105787985/180115147-cbd7e1bd-b2fc-4829-8f8b-5a2caa1ee55a.gif)
 
 :one:  해야 할 일, 진행중, 완료 카테고리 분리<br>
 :two:  :heavy_plus_sign: 를 누르면 적는 공간 추가<br>
