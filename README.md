@@ -19,3 +19,12 @@ Front-end 개발자의 가장 기본적인 HTML, CSS, Javascript에 대한 이�
 :three:  목록 드래그 앤 드롭<br>
 :four:  더블클릭 시 삭제<br>
 :five:  로컬스토리지 저장
+
+----
+# React + ts 리팩토링
+
+## timeLine
+
+1. gitclone
+
+2. create- react-app
