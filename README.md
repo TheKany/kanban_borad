@@ -23,6 +23,11 @@ Front-end 개발자의 가장 기본적인 HTML, CSS, Javascript에 대한 이�
 ----
 # React + ts 리팩토링
 
+## 기술
+<img src="https://img.shields.io/badge/Typescript-3178C6?style=flat-square&logo=Typescript&logoColor=white"/>
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/>
+<img src="https://img.shields.io/badge/scss-CC6699?style=flat-square&logo=scss&logoColor=white"/>
+
 ## timeLine
 
 1. gitclone
